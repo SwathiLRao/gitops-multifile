@@ -4,9 +4,9 @@
    name: bee
    labels:
      app: bee
-spec:
-  type: ClusterIP
-  ports:
+ spec:
+   type: ClusterIP
+   ports:
     - port: 8080
       targetPort: 8080
       protocol: TCP
