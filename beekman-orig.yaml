@@ -25,8 +25,8 @@ spec:
         name: beekman-1
         resources:
           limits:
-            cpu: 200m
-            memory: 28Mi
+            cpu: 500m
+            memory: 400Mi
           requests:
             cpu: 10m
             memory: 10Mi
@@ -42,8 +42,8 @@ spec:
         name: beekman-2
         resources:
           limits:
-            cpu: 200m
-            memory: 28Mi
+            cpu: 500m
+            memory: 400Mi
           requests:
             cpu: 10m
             memory: 10Mi
