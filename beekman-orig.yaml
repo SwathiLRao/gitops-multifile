@@ -5,7 +5,7 @@ metadata:
     app: bee
   name: beekman-change-reconciler
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: bee
@@ -73,10 +73,4 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-    dnsPolicy: ClusterFirst
-    imagePullSecrets:
-      - name: docker-credentials
-    restartPolicy: Always
-    schedulerName: default-scheduler
-    securityContext: {}
-    terminationGracePeriodSeconds: 30
+
