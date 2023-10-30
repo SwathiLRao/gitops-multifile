@@ -25,11 +25,11 @@ spec:
         name: beekman-1
         resources:
           limits:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
           requests:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       - env:
@@ -42,11 +42,11 @@ spec:
         name: beekman-2
         resources:
           limits:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
           requests:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       - env:
@@ -59,11 +59,11 @@ spec:
         name: beekman-3
         resources:
           limits:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
           requests:
-            cpu: 500m
-            memory: 400Mi
+            cpu: 200m
+            memory: 256Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
