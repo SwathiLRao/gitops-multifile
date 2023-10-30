@@ -49,13 +49,6 @@ spec:
             memory: 400Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-      dnsPolicy: ClusterFirst
-      imagePullSecrets:
-      - name: docker-credentials
-      restartPolicy: Always
-      schedulerName: default-scheduler
-      securityContext: {}
-      terminationGracePeriodSeconds: 30
       - env:
         - name: RUN_TYPE
           value: cpu
@@ -80,4 +73,10 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-
+    dnsPolicy: ClusterFirst
+    imagePullSecrets:
+      - name: docker-credentials
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    terminationGracePeriodSeconds: 30
