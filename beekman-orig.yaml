@@ -73,7 +73,7 @@ spec:
           value: "95"
         image: quay.io/ecotz/sampleapp:latest
         imagePullPolicy: Always
-        name: beekman-2
+        name: beekman-4
         resources:
           limits:
             cpu: 400m
@@ -90,7 +90,7 @@ spec:
           value: "95"
         image: quay.io/ecotz/sampleapp:latest
         imagePullPolicy: Always
-        name: beekman-2
+        name: beekman-5
         resources:
           limits:
             cpu: 400m
@@ -107,7 +107,7 @@ spec:
           value: "95"
         image: quay.io/ecotz/sampleapp:latest
         imagePullPolicy: Always
-        name: beekman-2
+        name: beekman-6
         resources:
           limits:
             cpu: 400m
@@ -124,7 +124,7 @@ spec:
           value: "95"
         image: quay.io/ecotz/sampleapp:latest
         imagePullPolicy: Always
-        name: beekman-2
+        name: beekman-7
         resources:
           limits:
             cpu: 400m
