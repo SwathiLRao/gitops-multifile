@@ -5,7 +5,7 @@ metadata:
     app: bee
   name: beekman-change-reconciler
 spec:
-  replicas: 3
+  replicas: 7
   selector:
     matchLabels:
       app: bee
@@ -25,11 +25,11 @@ spec:
         name: beekman-1
         resources:
           limits:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
           requests:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       - env:
@@ -42,11 +42,11 @@ spec:
         name: beekman-2
         resources:
           limits:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
           requests:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       - env:
@@ -59,11 +59,79 @@ spec:
         name: beekman-3
         resources:
           limits:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
           requests:
-            cpu: 200m
-            memory: 256Mi
+            cpu: 400m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: RUN_TYPE
+          value: cpu
+        - name: CPU_PERCENT
+          value: "95"
+        image: quay.io/ecotz/sampleapp:latest
+        imagePullPolicy: Always
+        name: beekman-2
+        resources:
+          limits:
+            cpu: 400m
+            memory: 500Mi
+          requests:
+            cpu: 400m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: RUN_TYPE
+          value: cpu
+        - name: CPU_PERCENT
+          value: "95"
+        image: quay.io/ecotz/sampleapp:latest
+        imagePullPolicy: Always
+        name: beekman-2
+        resources:
+          limits:
+            cpu: 400m
+            memory: 500Mi
+          requests:
+            cpu: 400m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: RUN_TYPE
+          value: cpu
+        - name: CPU_PERCENT
+          value: "95"
+        image: quay.io/ecotz/sampleapp:latest
+        imagePullPolicy: Always
+        name: beekman-2
+        resources:
+          limits:
+            cpu: 400m
+            memory: 500Mi
+          requests:
+            cpu: 400m
+            memory: 500Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: RUN_TYPE
+          value: cpu
+        - name: CPU_PERCENT
+          value: "95"
+        image: quay.io/ecotz/sampleapp:latest
+        imagePullPolicy: Always
+        name: beekman-2
+        resources:
+          limits:
+            cpu: 400m
+            memory: 500Mi
+          requests:
+            cpu: 400m
+            memory: 500Mi
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
       dnsPolicy: ClusterFirst
@@ -73,4 +141,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-
